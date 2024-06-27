@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'fragile';
+    src: url('../font/fragile-wy5jy.woff') format('woff');
+}
+
+h1{
+    font-family: 'fragile';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'SCoreDream';
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    min-width: 1320px;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+/* 헤더 */
+header{
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.header_in{
+    width: 80%;
+    max-width: 1320px;
+    margin: 10px auto;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_in ul{
+    font-family: 'fragile';
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+}
+
+.header_in a{
+    margin-left: 50px;
+    color: #5A6237;
+    font-size: 18px;
+    position: relative;
+}
+
+.header_in .solid{
+    width:100%;
+    margin:auto;
+    margin-top:20px;
+    height:2px;
+    background:#172f33;
+    visibility:hidden;
+    opacity:0;
+    transform:scaleX(0);
+    transition-property:opacity, transform;
+    transition-duration:0.5s;
+    
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+.header_in ul li a:hover .solid{
+    transform:scaleX(1);             
+    opacity:1;        
+    visibility:visible;
+}
+
+.header_in a:hover{
+    color: #172f33;
+}
+
+.img{
+    width: 100%;
+}
+
+/* 뚫린텍스트 */
+.text_empty{
+    background: url(../images/sub1/sub1-2_photo.png) no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.text_empty img{
+    width: 100%;
+    display: block;
+}
+
+.text_empty h3{
+    position: absolute;
+    left: 50%;
+    margin-left: -530px;
+    top: 70%;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* 브랜드 로고 컬러 스토리*/
+.about{
+    background: url(../images/sub1/sub1-4_leaf.png) no-repeat center 65%;
+    height: 3654px;
+}
+
+.about>div{
+    width: 1320px;
+    margin: auto;
+}
+
+.about h2{
+    font-family: 'fragile';
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 80px;
+    padding-bottom: 130px;
+    text-align: center;
+}
+
+.about ul{
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.about h3{
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 2;
+    margin-top: 130px;
+    margin-bottom: 180px;
+    text-align: center;
+}
+
+.about span{
+    font-family: 'fragile';
+}
+
+.logostory img, .color img{
+    display: block;
+    margin: auto;
+}
+
+/* 위치 */
+.location h2{
+    font-family: 'fragile';
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 200px;
+    padding-bottom: 130px;
+    text-align: center;
+}
+.location_in{
+    width: 1320px;
+    margin: auto;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+}
+
+.location_in img{
+    height: 502px;
+}
+
+.location_text{
+    margin-left: 100px;
+}
+
+.location_text h4{
+    font-family: 'fragile';
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
+.location_text p{
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+
+/* 푸터 */
+footer{
+    background: url(../images/footer_photo.png) no-repeat center center;
+    background-size: cover;
+    height: 353px;
+    margin-top: 200px;
+}
+
+.footer_in{
+    width: 1320px;
+    margin: auto;
+    padding-top: 100px;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    right: 0;
+    top: -95px;
+    mix-blend-mode: multiply;
+    clip-path: inset(0 0 100% 0);
+    transition: 3s;
+}
+
+.logo.on{
+    clip-path: inset(0 0 0 0);
+}
+
+.footer_in ul{
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    margin-top: 120px;
+}
+
+.footer_in a{
+    margin-left: 20px;
+    }
+
+.footer_in p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.footer_in span{
+    font-family: 'fragile';
+}
+
+.footer_in ul a:hover{
+    opacity: 0.6;
+}

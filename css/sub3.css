@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'fragile';
+    src: url('../font/fragile-wy5jy.woff') format('woff');
+}
+
+h1{
+    font-family: 'fragile';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'SCoreDream';
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    min-width: 1320px;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+/* 헤더 */
+header{
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.header_in{
+    width: 80%;
+    max-width: 1320px;
+    margin: 10px auto;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_in ul{
+    font-family: 'fragile';
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+}
+
+.header_in a{
+    margin-left: 50px;
+    color: #5A6237;
+    font-size: 18px;
+    position: relative;
+}
+
+.header_in .solid{
+    width:100%;
+    margin:auto;
+    margin-top:20px;
+    height:2px;
+    background:#172f33;
+    visibility:hidden;
+    opacity:0;
+    transform:scaleX(0);
+    transition-property:opacity, transform;
+    transition-duration:0.5s;
+    
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+.header_in ul li a:hover .solid{
+    transform:scaleX(1);             
+    opacity:1;        
+    visibility:visible;
+}
+
+.header_in a:hover{
+    color: #172f33;
+}
+
+.img{
+    width: 100%;
+}
+
+/* 뚫린텍스트 */
+.text_empty{
+    background: url(../images/sub3/sub3-2_photo.png) no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.text_empty img{
+    width: 100%;
+    display: block;
+}
+
+.text_empty h3{
+    position: absolute;
+    left: 50%;
+    margin-left: -530px;
+    top: 70%;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* 제품 */
+.product{
+    background: url(../images/sub3/sub3-3_leaf.png) no-repeat center 55%;
+    height: 2750px;
+}
+
+.product>div{
+    width: 1320px;
+    margin: auto;
+}
+
+.product h2{
+    font-family: 'fragile';
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.product>div ul{
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product>div li:hover h4, .product>div li:hover p{
+    color: #45757A;
+}
+
+.product>div li img{
+    transition: 0.5s;
+    border-radius: 120px 120px 0 0;
+}
+
+.product>div li:hover img{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.product>div h4{
+    margin: 20px 0 10px;
+    text-align: center;
+    font-family: 'fragile';
+    font-size: 18px;
+    font-weight: 500;
+}
+
+span{
+    font-family: 'SCoreDream';
+}
+
+.product>div p{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 60px;
+    line-height: 1.7;
+}
+
+.button{
+    font-size: 22px;
+    font-weight: 300;
+    color: #fff;
+    background-color: #7F9FA2;
+    border-radius: 50px;
+    padding: 5px 30px;
+    display: inline-block;
+}
+
+h5{
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.button:hover{
+    background-color: #2F5257;
+}
+
+
+
+/* 푸터 */
+footer{
+    background: url(../images/footer_photo.png) no-repeat center center;
+    background-size: cover;
+    height: 353px;
+    margin-top: 200px;
+}
+
+.footer_in{
+    width: 1320px;
+    margin: auto;
+    padding-top: 100px;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    right: 0;
+    top: -95px;
+    mix-blend-mode: multiply;
+    clip-path: inset(0 0 100% 0);
+    transition: 3s;
+}
+
+.logo.on{
+    clip-path: inset(0 0 0 0);
+}
+
+.footer_in ul{
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    margin-top: 120px;
+}
+
+.footer_in a{
+    margin-left: 20px;
+}
+
+.footer_in p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.footer_in span{
+    font-family: 'fragile';
+}
+
+.footer_in ul a:hover{
+    opacity: 0.6;
+}
